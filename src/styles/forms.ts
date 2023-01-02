@@ -13,14 +13,15 @@ export const Formulary = styled.form`
   font-family: inherit;
   box-shadow: 0rem 0rem 1.875rem -1.25rem rgba(0, 0, 0, 0.25);
   border-radius: 0.3125rem;
-  margin: 0 auto;
+  margin: 10vh auto 0 auto;
   @media (max-width: 500px) {
     max-width: 90vw;
-    margin: 0 2rem;
+    margin: 3rem 2rem;
   }
 `;
 
 export const FormDiv = styled.div`
+  position:relative:
   display: flex;
   justify-content: flex-start;
   flex-direction: column;

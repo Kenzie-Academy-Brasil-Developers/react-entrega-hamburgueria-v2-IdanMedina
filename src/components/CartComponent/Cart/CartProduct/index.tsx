@@ -25,7 +25,6 @@ const CartProduct = ({ product }: iCartProductProps) => {
         id={product.id}
         onClick={(e) => {
           deleteProduct(Number(e.currentTarget.id));
-          console.log(e.currentTarget.id);
         }}
       >
         Remover

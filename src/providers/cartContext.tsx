@@ -16,6 +16,8 @@ interface iCartContext {
   showProducts: (input: string) => void;
   addProduct: (currentProduct: iProduct) => void;
   deleteProduct: (id: number) => void;
+  modal: boolean;
+  setModal: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const CartProvider = ({ children }: iCartProviderProps) => {
@@ -23,6 +25,7 @@ export const CartProvider = ({ children }: iCartProviderProps) => {
   const [products, setProducts] = useState([] as iProduct[]);
   const [filteredProducts, setFilteredProducts] = useState([] as iProduct[]);
   const [currentSale, setCurrentSale] = useState([] as iProduct[]);
+  const [modal, setModal] = useState<boolean>(false);
 
   useEffect(() => {
     async function getProducts() {
@@ -86,6 +89,8 @@ export const CartProvider = ({ children }: iCartProviderProps) => {
         showProducts,
         addProduct,
         deleteProduct,
+        modal,
+        setModal
       }}
     >
       {children}

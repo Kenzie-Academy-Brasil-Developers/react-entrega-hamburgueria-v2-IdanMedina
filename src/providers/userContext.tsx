@@ -82,11 +82,12 @@ export const UserProvider = ({ children }: salesProviderProps) => {
   ) => {
     try {
       setLoading(true);
-      const response = await api.post("/login", data);
+      const response = await api.post<iResponse>("/login", data);
       localStorage.setItem("@TOKEN", response.data.accessToken);
       localStorage.setItem("@USERID", response.data.user.id);
-      console.log(response.data.user);
+      console.log(response.data.user)
       setUser(response.data.user);
+      console.log(user)
       toast.success("Login efetuado", { autoClose: 1667 });
       setTimeout(() => navigate("cart"), 1667);
     } catch (error) {

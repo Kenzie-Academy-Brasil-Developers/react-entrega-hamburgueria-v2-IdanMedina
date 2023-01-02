@@ -1,8 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const MoveModal = keyframes`
+0%{transform: translateY(-70%);
+    opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity:1
+    }
+`;
 
 export const CartDiv = styled.div`
   margin: 0rem 1rem;
   border-radius: 5px;
+  box-shadow: 0 0.25rem 2.5rem -0.625rem rgba(0, 0, 0, 0.25);
+  animation: ${MoveModal} 1s ease;
   @media (min-width: 1024px) {
     margin: 0;
     position: fixed;

@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     --grey-50: #828282;
     --grey-20: #E0E0E0;
     --grey-0: #F5F5F5;
+    --grey-opacity-100: #33333380; 
     --negative:#E60000;
     --warning:#FFCD07;
     --success:#168821;
@@ -58,6 +59,15 @@ export const GlobalStyle = createGlobalStyle`
   font-size: 12px;
   line-height: 16px;
   color: var(--grey-50);
+  }
+
+  label {
+  position: absolute;
+  background-color: var(--color-white);
+  padding: 0.25rem;
+  margin: -0.67rem 0 0 1rem ;
+  font-weight: 500;
+  font-size: 0.875rem;
   }
 
   hr{

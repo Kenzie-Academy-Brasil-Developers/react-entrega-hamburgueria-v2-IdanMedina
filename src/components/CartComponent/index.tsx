@@ -5,10 +5,11 @@ import Header from "./Header";
 import ProductList from "./ProductsList";
 import { CartContext } from "../../providers/cartContext";
 import { Loading } from "../../styles/loading";
+import Modal from "./Modal";
 
 export const CartHome = () => {
-  const { loading } = useContext(CartContext);
-
+  const { loading, modal } = useContext(CartContext);
+  
   return (
     <div>
       {loading ? (
@@ -18,6 +19,7 @@ export const CartHome = () => {
           <Header />
           <ProductList />
           <Cart />
+          {modal && <Modal/>}
         </>
       )}
     </div>

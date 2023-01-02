@@ -18,14 +18,6 @@ const schema = yup.object().shape({
     .min(6, "Mínimo 6 caracteres"),
 });
 
-/* export interface iInputRegister {
-  id: any,
-  placeholder: any,
-  type: any,
-  register: UseFormRegisterReturn,
-  error?: FieldError
-} */
-
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
 
@@ -53,7 +45,6 @@ const LoginForm = () => {
             placeholder="Digite aqui seu email"
             type="email"
             {...register("email")}
-            /* error={errors.email} */
           />
           {errors.email && <Paragraph>Email incorreto</Paragraph>}
         </FormDiv>
@@ -64,7 +55,6 @@ const LoginForm = () => {
             placeholder="Digite aqui sua senha"
             type="password"
             {...register("password")}
-            /* error={errors.password} */
           />
           {errors.password && <Paragraph>Senha incorreta</Paragraph>}
         </FormDiv>

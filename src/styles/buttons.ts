@@ -106,7 +106,7 @@ export const RemoveSpn = styled.span`
 `;
 
 export const RegisterLink = styled(Link)`
-display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -129,6 +129,12 @@ display: flex;
     border-color: var(--grey-50);
   }
 `
+export const LoginLink = styled(Link)`
+  font-size: 0.875rem;
+  color: var(--grey-50)
+  }
+`
+
 export const RegisterBtn = styled.button`
 display: flex;
   flex-direction: row;

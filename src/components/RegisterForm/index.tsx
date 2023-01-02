@@ -5,7 +5,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { iDataRegister, UserContext } from "../../providers/userContext";
 import { FormDiv, Formulary, RegDiv } from "../../styles/forms";
-import { RegisterBtn } from "../../styles/buttons";
+import { LoginLink, RegisterBtn } from "../../styles/buttons";
 import { Paragraph, Title1 } from "../../styles/typography";
 import { Input } from "../../styles/inputs";
 import { Link } from "react-router-dom";
@@ -43,7 +43,7 @@ const RegisterForm = () => {
       <Formulary onSubmit={handleSubmit(submit)}>
         <RegDiv>
           <Title1>Cadastro</Title1>
-          <Link to="/">Retornar para o login</Link>
+          <LoginLink to="/">Retornar para o login</LoginLink>
         </RegDiv>
         <FormDiv>
           <label>Nome</label>
@@ -52,7 +52,6 @@ const RegisterForm = () => {
             placeholder="Digite aqui seu nome"
             type="text"
             {...register("name")}
-            /* {...errors.name} */
           />
           {errors.name && <Paragraph>{errors.name.message}</Paragraph>}
         </FormDiv>
@@ -63,7 +62,6 @@ const RegisterForm = () => {
             placeholder="Digite aqui seu email"
             type="email"
             {...register("email")}
-            /* {...errors.email} */
           />
           {errors.email && <Paragraph>{errors.email.message}</Paragraph>}
         </FormDiv>
@@ -74,7 +72,6 @@ const RegisterForm = () => {
             placeholder="Digite aqui seu senha"
             type="password"
             {...register("password")}
-            /* {...errors.password} */
           />
           {errors.password && <Paragraph>{errors.password.message}</Paragraph>}
         </FormDiv>
@@ -85,7 +82,6 @@ const RegisterForm = () => {
             placeholder="Digite aqui novamente sua senha"
             type="password"
             {...register("passwordConfirm")}
-            /* {...errors.passwordConfirm} */
           />
           {errors.passwordConfirm && (
             <Paragraph>{errors.passwordConfirm.message}</Paragraph>

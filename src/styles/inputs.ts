@@ -1,7 +1,6 @@
 import styled from "styled-components";
-/* import { iInputRegister } from "../components/LoginForm"; */
 
-export const Input = styled.input/* <iInputRegister> */`
+export const Input = styled.input`
   display: flex;
   justify-content: space-between;
   align-items: center;
