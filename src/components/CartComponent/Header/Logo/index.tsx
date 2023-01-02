@@ -1,5 +1,5 @@
 import React from "react";
-import { LogoDiv } from "../../styles/header";
+import { LogoDiv } from "../../../../styles/header";
 
 const Logo = () => {
   return (

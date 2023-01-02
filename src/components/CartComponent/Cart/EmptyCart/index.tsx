@@ -1,5 +1,5 @@
-import React from "react";
-import { EmptyCartDiv } from "../../styles/cart"
+import React from "react"
+import { EmptyCartDiv } from "../../../../styles/cart"
 
 const EmptyCart = () => {
   return (

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -5,7 +6,7 @@ const Button = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 2.5rem;
   padding: 0px 20px;
   gap: 10px;
   background-color: var(--color-primary);
@@ -22,6 +23,30 @@ const Button = styled.button`
     border-color: var(--color-primary-50);
   }
 `;
+
+export const LoginBtn = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  width: 100%;
+  padding: 0rem 1.25rem;
+  background-color: var(--color-primary);
+  border: 0.125rem solid var(--color-primary);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--color-white);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--color-primary-50);
+    border-color: var(--color-primary-50);
+  }
+`;
+
 export const ButtonInput = styled.button`
   position: absolute;
   right: 0.6rem;
@@ -79,5 +104,54 @@ export const RemoveSpn = styled.span`
   color: var(--grey-50);
   cursor: pointer;
 `;
+
+export const RegisterLink = styled(Link)`
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--grey-0);
+  border: 0.125rem solid var(--grey-0);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--grey-50);
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: var(--grey-20);
+    background-color: var(--grey-50);
+    border-color: var(--grey-50);
+  }
+`
+export const RegisterBtn = styled.button`
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--grey-0);
+  border: 0.125rem solid var(--grey-0);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--grey-50);
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: var(--grey-20);
+    background-color: var(--grey-50);
+    border-color: var(--grey-50);
+  }
+`
 
 export default Button;
