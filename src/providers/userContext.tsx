@@ -50,12 +50,12 @@ export const UserContext = createContext({} as iUserContext);
 export const UserProvider = ({ children }: salesProviderProps) => {
   const [user, setUser] = useState<iUser | null>(null);
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     const token = localStorage.getItem("@TOKEN")
     token && navigate("cart")
   }, []);
-
+  
   const userRegister = async (
     data: iDataRegister,
     setLoading: React.Dispatch<React.SetStateAction<boolean>>
@@ -85,9 +85,7 @@ export const UserProvider = ({ children }: salesProviderProps) => {
       const response = await api.post<iResponse>("/login", data);
       localStorage.setItem("@TOKEN", response.data.accessToken);
       localStorage.setItem("@USERID", response.data.user.id);
-      console.log(response.data.user)
       setUser(response.data.user);
-      console.log(user)
       toast.success("Login efetuado", { autoClose: 1667 });
       setTimeout(() => navigate("cart"), 1667);
     } catch (error) {
