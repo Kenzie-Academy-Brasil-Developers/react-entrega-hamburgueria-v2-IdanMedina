@@ -3,6 +3,7 @@ import { CartContext } from "../../../../providers/cartContext";
 import { ButtonInput } from "../../../../styles/buttons";
 import { FormStyled } from "../../../../styles/header";
 import { InputSearchStyled } from "../../../../styles/inputs";
+import { MagnGlassWhite } from "../../../../styles/icons";
 
 const InputSearch = () => {
   const { showProducts } = useContext(CartContext);
@@ -19,7 +20,7 @@ const InputSearch = () => {
         placeholder="Digitar Pesquisa"
         onChange={(e) => setData(e.target.value)}
       />
-      <ButtonInput type="submit">Pesquisar</ButtonInput>
+      <ButtonInput type="submit"><MagnGlassWhite /></ButtonInput>
     </FormStyled>
   );
 };

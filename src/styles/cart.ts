@@ -15,6 +15,7 @@ export const CartDiv = styled.div`
   border-radius: 5px;
   box-shadow: 0 0.25rem 2.5rem -0.625rem rgba(0, 0, 0, 0.25);
   animation: ${MoveModal} 1s ease;
+  width: 95%;
   @media (min-width: 1024px) {
     margin: 0;
     position: fixed;
@@ -55,5 +56,8 @@ export const EmptyCartDiv = styled.div`
   margin-bottom: 2rem;
   & p {
     font-size: 0.875rem;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
   }
 `;

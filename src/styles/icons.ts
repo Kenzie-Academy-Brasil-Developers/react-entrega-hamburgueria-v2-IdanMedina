@@ -24,3 +24,8 @@ export const MagnGlass = styled(RxMagnifyingGlass)`
         display: none;
         }
 `
+export const MagnGlassWhite = styled(RxMagnifyingGlass)`
+    cursor:pointer;
+    color: var(--color-white);
+    scale: 1.5;
+`
